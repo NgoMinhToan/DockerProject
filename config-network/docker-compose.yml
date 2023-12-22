@@ -1,0 +1,17 @@
+networks:
+  frontend:
+    name: frontend
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "192.168.0.0/24"
+          ip_range: "192.168.0.128/25"
+          gateway: "192.168.0.1"
+  backend:
+    name: backend
+    driver: bridge
+    ipam:
+      config:
+        - subnet: "192.168.1.0/24"
+          ip_range: "192.168.1.128/25"
+          gateway: "192.168.1.1"
