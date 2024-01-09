@@ -2,6 +2,7 @@ networks:
   frontend:
     name: frontend
     driver: bridge
+    external: true
     ipam:
       config:
         - subnet: "192.168.0.0/24"
@@ -10,6 +11,7 @@ networks:
   backend:
     name: backend
     driver: bridge
+    external: true
     ipam:
       config:
         - subnet: "192.168.1.0/24"

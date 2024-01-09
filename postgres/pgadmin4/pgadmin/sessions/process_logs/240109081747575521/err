@@ -1,0 +1,100 @@
+240109081751890817,pg_dump: last built-in OID is 16383
+
+240109081752080416,pg_dump: reading extensions
+
+240109081752270799,pg_dump: identifying extension members
+
+240109081752465034,pg_dump: reading schemas
+
+240109081752653818,pg_dump: reading user-defined tables
+
+240109081753398985,pg_dump: reading user-defined functions
+
+240109081753595199,pg_dump: reading user-defined types
+
+240109081753966059,pg_dump: reading procedural languages
+
+240109081754160119,pg_dump: reading user-defined aggregate functions
+
+240109081754348684,pg_dump: reading user-defined operators
+
+240109081754539548,pg_dump: reading user-defined access methods
+
+240109081754729084,pg_dump: reading user-defined operator classes
+
+240109081754918509,pg_dump: reading user-defined operator families
+
+240109081755111310,pg_dump: reading user-defined text search parsers
+
+240109081755300070,pg_dump: reading user-defined text search templates
+
+240109081755490027,pg_dump: reading user-defined text search dictionaries
+
+240109081755677903,pg_dump: reading user-defined text search configurations
+
+240109081755867441,pg_dump: reading user-defined foreign-data wrappers
+
+240109081756059298,pg_dump: reading user-defined foreign servers
+
+240109081756249013,pg_dump: reading default privileges
+
+240109081756438781,pg_dump: reading user-defined collations
+
+240109081756646909,pg_dump: reading user-defined conversions
+
+240109081756837767,pg_dump: reading type casts
+
+240109081757029693,pg_dump: reading transforms
+
+240109081757217774,pg_dump: reading table inheritance information
+
+240109081757406321,pg_dump: reading event triggers
+
+240109081757593995,pg_dump: finding extension tables
+
+240109081757783289,pg_dump: finding inheritance relationships
+
+240109081757784610,pg_dump: reading column info for interesting tables
+
+240109081758047880,pg_dump: flagging inherited columns in subtables
+
+240109081758050342,pg_dump: reading partitioning data
+
+240109081758246771,pg_dump: reading indexes
+
+240109081758454649,pg_dump: flagging indexes in partitioned tables
+
+240109081758455799,pg_dump: reading extended statistics
+
+240109081758643387,pg_dump: reading constraints
+
+240109081758833030,pg_dump: reading triggers
+
+240109081759049755,pg_dump: reading rewrite rules
+
+240109081759267761,pg_dump: reading policies
+
+240109081759269053,pg_dump: reading row-level security policies
+
+240109081759461200,pg_dump: reading publications
+
+240109081759649132,pg_dump: reading publication membership of tables
+
+240109081759838148,pg_dump: reading publication membership of schemas
+
+240109081800026469,pg_dump: reading subscriptions
+
+240109081800427937,pg_dump: reading large objects
+
+240109081800621190,pg_dump: reading dependency data
+
+240109081801791275,pg_dump: saving encoding = UTF8
+
+240109081801793008,pg_dump: saving standard_conforming_strings = on
+
+240109081801981407,pg_dump: saving search_path = 
+
+240109081801981977,pg_dump: saving database definition
+
+240109081803125937,pg_dump: dumping contents of table "public.feedback"
+

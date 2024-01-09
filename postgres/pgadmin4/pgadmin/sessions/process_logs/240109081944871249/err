@@ -1,0 +1,8 @@
+240109081945021504,pg_restore: connecting to database for restore
+
+240109081946251193,pg_restore: creating TABLE "public.feedback"
+
+240109081946399543,pg_restore: processing data for table "public.feedback"
+
+240109081946596999,pg_restore: creating CONSTRAINT "public.feedback feedback_pkey"
+

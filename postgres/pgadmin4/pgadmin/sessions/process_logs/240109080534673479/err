@@ -1,0 +1,19 @@
+240109080534837526,pg_restore: connecting to database for restore
+
+240109080534877780,pg_restore: creating TABLE "public.feedback"
+
+240109080534909203,pg_restore: while PROCESSING TOC:
+
+240109080534909662,pg_restore: from TOC entry 214; 1259 16405 TABLE feedback mtoan
+
+240109080534910004,pg_restore: error: could not execute query: ERROR:  role "mtoan" does not exist
+
+240109080534910333,Command was: ALTER TABLE public.feedback OWNER TO mtoan;
+
+240109080534910738,
+240109080534911014,pg_restore: processing data for table "public.feedback"
+
+240109080534912762,pg_restore: creating CONSTRAINT "public.feedback feedback_pkey"
+
+240109080534918609,pg_restore: warning: errors ignored on restore: 1
+
