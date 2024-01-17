@@ -1,4 +1,0 @@
-240109080723695313,pg_dump: error: query failed: ERROR:  permission denied to set role "postgres"
-
-240109080723697577,pg_dump: detail: Query was: SET ROLE postgres
-

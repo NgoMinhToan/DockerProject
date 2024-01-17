@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  cloudflare:
+    container_name: cloudflare_server
+    image: cloudflare/cloudflared:latest
+    restart: always
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: eyJhIjoiYzBkZTYzYTQ3ZWJlZDVmODU1MmIwMDViZmQ4ZDNiYTUiLCJ0IjoiNmFiZjJmM2YtZTA4My00NWI4LWI1MTMtOTdiMTU1ZDcwMGYxIiwicyI6IllUYzVPR1EyWW1FdE9UWXhPUzAwWXpoaExUazVOMlF0TWpBeU9HUTNZamcxTkRRMCJ9
+    networks:
+      - backend
