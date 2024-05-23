@@ -1,2 +1,0 @@
-2024/01/01 06:34:49 [error] 557#557: *1338 server could not be resolved (3: Host not found), client: 192.168.65.1, server: toandev.click, request: "GET / HTTP/2.0", host: "www.toandev.click"
-2024/01/01 06:34:50 [error] 557#557: *1338 server could not be resolved (3: Host not found), client: 192.168.65.1, server: toandev.click, request: "GET /favicon.ico HTTP/2.0", host: "www.toandev.click", referrer: "https://www.toandev.click/"

@@ -1,0 +1,25 @@
+version: "3"
+
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  n8n:
+    container_name: n8n
+    image: docker.n8n.io/n8nio/n8n:latest
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    ports:
+      - "5678:5678/tcp"
+    # environment:
+      # DB_TYPE: 'postgresdb'
+      # DB_POSTGRESDB_DATABASE: POSTGRES_DATABASE
+      # DB_POSTGRESDB_HOST: POSTGRES_HOST
+      # DB_POSTGRESDB_PORT: POSTGRES_PORT
+      # DB_POSTGRESDB_USER: POSTGRES_USER
+      # DB_POSTGRESDB_SCHEMA: POSTGRES_SCHEMA
+      # DB_POSTGRESDB_PASSWORD: POSTGRES_PASSWORD
+    volumes:
+      - 'n8n_data:/home/note/.n8n'
+    
+    restart: unless-stopped
+
+volumes:
+  n8n_data:

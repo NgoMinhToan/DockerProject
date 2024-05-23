@@ -1,2 +1,0 @@
-[01/Jan/2024:06:34:49 +0000] - - 502 - GET https www.toandev.click "/" [Client 192.168.65.1] [Length 556] [Gzip -] [Sent-to server] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "-"
-[01/Jan/2024:06:34:50 +0000] - - 502 - GET https www.toandev.click "/favicon.ico" [Client 192.168.65.1] [Length 556] [Gzip -] [Sent-to server] "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" "https://www.toandev.click/"
