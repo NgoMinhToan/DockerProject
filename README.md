@@ -7,7 +7,7 @@ docker compose -f postgres/docker-compose.yml -f config-network/docker-compose.y
 docker compose -f nginx/docker-compose.yml -f config-network/docker-compose.yml up -d
 
 - Traefik reverse proxy
-docker-compose -f traefik/docker-compose.yaml -f config-network/docker-compose.yml up -d reverse-proxy
+docker-compose -f traefik/docker-compose.yaml -f config-network/docker-compose.yml up -d
 
 - n8n
 docker-compose -f n8n/docker-compose.yml -f config-network/docker-compose.yml up -d n8n
@@ -17,6 +17,11 @@ docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJh
 
 docker compose -f cloudflare/docker-compose.yml -f config-network/docker-compose.yml up -d
 
+```
+
+## Run with scale
+```
+ --scale service_name=2
 ```
 
 ### Public
