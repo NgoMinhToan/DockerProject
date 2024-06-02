@@ -28,11 +28,18 @@ function generatePresignedUrl(key, bucketName, expire, accessKeyId, secretAccess
 app.post('/generate-presigned-url', (req, res) => {
     const { key, bucketName, expire, accessKeyId, secretAccessKey } = req.body;
 
-    if (!key || !bucketName || !expire || !accessKeyId || !secretAccessKey) {
+    if (!key || !bucketName || !expire) {
         return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const presignedUrl = generatePresignedUrl(key, bucketName, expire, accessKeyId, secretAccessKey);
+    const finalAccessKeyId = accessKeyId || process.env.S3_ACCESS_KEY;
+    const finalSecretAccessKey = secretAccessKey || process.env.S3_SECRET_KEY;
+
+    if (!finalAccessKeyId || !finalSecretAccessKey) {
+        return res.status(400).json({ error: 'Missing AWS credentials' });
+    }
+
+    const presignedUrl = generatePresignedUrl(key, bucketName, expire, finalAccessKeyId, finalSecretAccessKey);
     res.json({ presignedUrl });
 });
 
