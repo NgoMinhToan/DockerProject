@@ -1,1 +1,0 @@
-2024/02/05 08:55:14 [error] 206#206: *2 "/var/www/html/pihole/admin/index.html" is not found (2: No such file or directory), client: 192.168.65.1, server: localhost-nginx-proxy-manager, request: "GET /pihole/admin/ HTTP/1.1", host: "localhost"
