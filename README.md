@@ -17,7 +17,18 @@ docker run cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJh
 
 docker compose -f cloudflare/docker-compose.yml -f config-network/docker-compose.yml up -d
 
+- vps|tailscale
+docker-compose -f tailscale/docker-compose.yaml -f config-network/docker-compose.yml up -d tailscale
+
 ```
+
+
+
+
+
+
+
+
 
 ## Run with scale
 ```
