@@ -1,10 +1,25 @@
 ## traefik.yml
 
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false
+
 # Docker configuration backend
 providers:
   docker:
     defaultRule: "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+    useBindPortIP: true
+
+  # toandev-domain:
+  #   defaultRule: "Host(`{{ trimPrefix `/` .Name }}.toandev.click`)"
 
 # API and dashboard configuration
 api:
   insecure: true
+
+entryPoints:
+  web:
+    address: ":80"
+
+  websecure:
+    address: ":443"

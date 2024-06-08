@@ -26,7 +26,15 @@ services:
     # ports:
       # - 88:80
       # - 443:443
-    
+
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.pgadmin4.rule=Host(`pgadmin4.toandev.click`)
+      - traefik.http.routers.pgadmin4.tls=true
+      - traefik.http.routers.pgadmin4.entrypoints=web,websecure
+      - traefik.enable=true
+      - "traefik.http.services.pgadmin4.loadbalancer.server.port=80"
+
     volumes:
       - ./pgadmin4/pgadmin:/var/lib/pgadmin
     networks:
