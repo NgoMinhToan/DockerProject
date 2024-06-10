@@ -5,16 +5,38 @@ services:
     image: tailscale/tailscale:latest
     hostname: tailscale
     environment:
-      - TS_AUTHKEY=tskey-client-notAReal-OAuthClientSecret1Atawk
-      - TS_EXTRA_ARGS=--advertise-tags=tag:container
+      - TS_AUTHKEY=tskey-auth-kZAnRS4mj521CNTRL-94sJr2gvLx9Xr8rCYd8Sx9LeRzqs3QWjJ
+      # - TS_EXTRA_ARGS=--advertise-tags=tag:container
+      # - TS_EXTRA_ARGS=--advertise-tags=tag:ci
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_USERSPACE=false
+      - TS_ACCEPT_DNS=false
+      - TS_AUTH_ONCE=true
     volumes:
       - ${PWD}/tailscale/state:/var/lib/tailscale
       - /dev/net/tun:/dev/net/tun
+      - ./tailscale-setup.sh:/usr/local/bin/tailscale-setup.sh
     cap_add:
       - net_admin
       - sys_module
+    privileged: true
     restart: unless-stopped
+    # command: "tailscale up --accept-dns --auth-key=tskey-auth-kZAnRS4mj521CNTRL-94sJr2gvLx9Xr8rCYd8Sx9LeRzqs3QWjJ --advertise-exit-node"
+    dns:
+      - "192.168.0.2"
     networks:
-      - backend
+      pihole:
+        ipv4_address: 192.168.0.3
+
+  
+
+networks:
+  pihole:
+    name: pihole
+    driver: bridge
+    # external: true
+    ipam:
+      config:
+        - subnet: "192.168.0.0/24"
+          ip_range: "192.168.0.128/25"
+          gateway: "192.168.0.1"

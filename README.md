@@ -20,6 +20,12 @@ docker compose -f cloudflare/docker-compose.yml -f config-network/docker-compose
 - vps|tailscale
 docker-compose -f tailscale/docker-compose.yaml -f config-network/docker-compose.yml up -d tailscale
 
+- pihole|tailscale
+docker-compose -f tailscale-pihole/docker-compose.yaml up -d 
+
+- tailscale-pihole-exit-node
+docker-compose -f tailscale-pihole-exit-node/docker-compose.yaml up -d
+
 ```
 
 

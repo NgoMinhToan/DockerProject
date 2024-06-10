@@ -1,0 +1,67 @@
+---
+version: "3.7"
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
+      - "80:80/tcp"
+    # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
+    environment:
+      TZ: 'Asia/Ho_Chi_Minh'
+      WEBPASSWORD: '123456'
+    # Volumes store your data between container upgrades
+    volumes:
+      - './pihole/etc-pihole:/etc/pihole'
+      - './pihole/etc-dnsmasq.d:/etc/dnsmasq.d'
+    #   https://github.com/pi-hole/docker-pi-hole#note-on-capabilities
+    cap_add:
+      - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
+    restart: unless-stopped
+    dns: 
+      - 1.1.1.1
+      - 8.8.8.8
+    networks:
+      pihole-exit-node:
+        ipv4_address: 192.168.0.2
+
+  tailscale:
+    image: tailscale/tailscale:latest
+    environment:
+      - TS_AUTHKEY=tskey-auth-kZAnRS4mj521CNTRL-94sJr2gvLx9Xr8rCYd8Sx9LeRzqs3QWjJ
+      # - TS_EXTRA_ARGS=--advertise-tags=tag:container
+      # - TS_EXTRA_ARGS=--advertise-tags=tag:ci
+      - TS_STATE_DIR=/var/lib/tailscale
+      - TS_USERSPACE=true
+      - TS_ACCEPT_DNS=false
+      - TS_AUTH_ONCE=true
+      - TS_SERVE_CONFIG=/config/tailscale-config.json
+    volumes:
+      - ./tailscale/state:/var/lib/tailscale
+      - ./tailscale/config:/config
+      - /dev/net/tun:/dev/net/tun
+    cap_add:
+      - net_admin
+      - sys_module
+    hostname: ts-pihole-exit-node
+    privileged: true
+    restart: unless-stopped
+    dns:
+      - 192.168.0.2
+    networks:
+      pihole-exit-node:
+        ipv4_address: 192.168.0.3
+
+networks:
+  pihole-exit-node:
+    name: pihole-exit-node
+    driver: bridge
+    external: false
+    ipam:
+      config:
+        - subnet: "192.168.0.0/24"
+          ip_range: "192.168.0.128/25"
+          gateway: "192.168.0.1"
