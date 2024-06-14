@@ -1,0 +1,18 @@
+{"logtail":{"client_time":"2024-06-11T07:33:44.378004138Z","proc_id":143087759,"proc_seq":8574},"metrics":"I0202I0402I0602I0802I0a02I0c9601I1808I6a08I2402I2602I289601","text":"tailscaled got signal terminated; shutting down\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.402237346Z","proc_id":143087759,"proc_seq":8575},"text":"control: client.Shutdown ...\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.407374055Z","proc_id":143087759,"proc_seq":8576},"text":"control: updateRoutine: exiting\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.41370768Z","proc_id":143087759,"proc_seq":8577},"v":1,"text":"control: PollNetMap: context canceled\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.417642263Z","proc_id":143087759,"proc_seq":8578},"text":"control: mapRoutine: exiting\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.42437743Z","proc_id":143087759,"proc_seq":8579},"v":1,"text":"control: authRoutine: context done.\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.431350138Z","proc_id":143087759,"proc_seq":8580},"text":"control: authRoutine: exiting\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.434818638Z","proc_id":143087759,"proc_seq":8581},"text":"control: Client.Shutdown done.\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.43897793Z","proc_id":143087759,"proc_seq":8582},"text":"magicsock: closing connection to derp-20 (conn-close), age 1h18m25s\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.447477846Z","proc_id":143087759,"proc_seq":8583},"text":"magicsock: 0 active derp conns\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.453080055Z","proc_id":143087759,"proc_seq":8584},"v":2,"text":"wg: Routine: receive incoming mkReceiveFunc - stopped\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.45629668Z","proc_id":143087759,"proc_seq":8585},"v":1,"text":"warning: fakeRouter.Close: not implemented.\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.459010971Z","proc_id":143087759,"proc_seq":8586},"v":2,"text":"wg: Device closing\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.460480346Z","proc_id":143087759,"proc_seq":8587},"v":2,"text":"wg: Routine: receive incoming mkReceiveFunc - stopped\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.461853888Z","proc_id":143087759,"proc_seq":8588},"v":2,"text":"wg: Routine: receive incoming receiveDERP - stopped\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.463464888Z","proc_id":143087759,"proc_seq":8589},"v":2,"text":"wg: Device closed\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.466453846Z","proc_id":143087759,"proc_seq":8590},"text":"flushing log.\n"}
+{"logtail":{"client_time":"2024-06-11T07:33:44.47272118Z","proc_id":143087759,"proc_seq":8591},"text":"logger closing down\n"}
