@@ -26,6 +26,10 @@ docker-compose -f tailscale-pihole/docker-compose.yaml up -d
 - tailscale-pihole-exit-node
 docker-compose -f tailscale-pihole-exit-node/docker-compose.yaml up -d
 
+- pocket-base
+// following: https://dev.to/_russell/deploying-pocketbase-with-docker-nginx-and-ssl-323l
+docker-compose -f pocket-base/docker-compose.yaml up -d --build
+
 ```
 
 
