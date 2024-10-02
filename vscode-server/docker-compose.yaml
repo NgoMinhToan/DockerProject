@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+    code-server:
+        image: 'codercom/code-server:latest'
+        environment:
+            - DOCKER_USER=$USER
+        user: '$(id -u):$(id -g)'
+        volumes:
+            - '/home/toan/dev:/home/coder/project'
+            - '/DATA/AppData/code-server/.config:/home/coder/.config'
+        ports:
+            - '8080:8080'
+        container_name: code-server
